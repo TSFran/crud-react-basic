@@ -1,6 +1,7 @@
 import React from 'react';
 import ListUser from './components/ListUser';
 import Form from './components/Form';
+import UserService from './service/UserService';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -77,6 +78,9 @@ export default class App extends React.Component {
       <div>
         <Form input={input} addUser={this.addUser} />
         {listUser}
+        <div>
+          <UserService />
+        </div>
       </div>
     );
   }
